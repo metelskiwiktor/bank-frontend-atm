@@ -1,0 +1,7 @@
+Logowanie
+<form>
+  Karta płatnicza
+  <input type="text" [(ngModel)]="user.cardNumber" [ngModelOptions]="{standalone: true}">
+
+  <button (click)="login()">Zaloguj się</button>
+</form>

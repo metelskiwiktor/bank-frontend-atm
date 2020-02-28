@@ -1,0 +1,10 @@
+<form>
+  Wpisz kwotę:
+  <input type="number" [(ngModel)]="transferSelf.amount" [ngModelOptions]="{standalone: true}">
+  Rodzaj płatności:
+  <select [(ngModel)]="operationChoice" [ngModelOptions]="{standalone: true}">
+    <option value="deposit">Wpłać</option>
+    <option value="withdraw">Wypłać</option>
+  </select>
+  <button (click)="createTransaction()">Dokonaj transakcji</button>
+</form>
