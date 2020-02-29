@@ -24,14 +24,12 @@ export class TransferSelfComponent implements OnInit {
   createTransaction() {
     this.transferSelf.senderAccountNumber = this.accountStorage.getAccountNumber();
     this.transferSelf.senderBalance = this.accountStorage.getBalance();
-    this.httpClientService.createTransactionSelf(this.transferSelf, this.operationChoice).toPromise().then(value => {
+    this.httpClientService.createTransactionSelf(this.transferSelf, this.operationChoice).toPromise().then(() => {
       this.httpClientService.getAccountDetails();
       this.ngZone.run(() => this.router.navigate(['/']));
     }).catch(reason => {
-      alert(reason.toString());
-      console.log(reason.toString());
-      console.log(reason);
-      console.log(reason.toLocaleString());
+      alert(reason.error.errorMessage);
+      window.location.reload();
     });
   }
 

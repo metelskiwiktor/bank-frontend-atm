@@ -18,6 +18,4 @@ export class AppComponent {
       this.balance = value.balance;
     });
   }
-
-  title = 'bank-frontend-atm';
 }
