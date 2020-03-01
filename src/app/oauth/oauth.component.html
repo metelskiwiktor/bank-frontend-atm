@@ -1,7 +1,17 @@
 Logowanie
 <form>
-  Karta płatnicza
-  <input type="text" [(ngModel)]="user.cardNumber" [ngModelOptions]="{standalone: true}">
+  Uzupełnij dane karty płatniczej
+
+  Numer
+  <input type="text" [(ngModel)]="user.number" [ngModelOptions]="{standalone: true}">
+  CCV
+  <input type="text" [(ngModel)]="user.ccv" [ngModelOptions]="{standalone: true}">
+  Data ważności
+  <input type="text" [(ngModel)]="user.expiryDate" [ngModelOptions]="{standalone: true}">
+  Imię
+  <input type="text" [(ngModel)]="user.firstName" [ngModelOptions]="{standalone: true}">
+  Nazwisko
+  <input type="text" [(ngModel)]="user.lastName" [ngModelOptions]="{standalone: true}">
 
   <button (click)="login()">Zaloguj się</button>
 </form>
